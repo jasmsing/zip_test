@@ -29,9 +29,9 @@ build:
      env:
       REPO: "repo"
       CF_APP: "{{deploy.parameters.app-name}}"
-      CF_SPACE: "{{deploy.parameters.dev-space}}"
-      CF_ORGANIZATION: "{{deploy.parameters.dev-organization}}"
-      CF_REGION_ID: "{{deploy.parameters.dev-region}}"
+      CF_SPACE: "{{space}}"
+      CF_ORGANIZATION: "{{organization}}"
+      CF_REGION_ID: "{{region}}"
      execute: true
     services: ["repo"]
   hidden: ["form"]
