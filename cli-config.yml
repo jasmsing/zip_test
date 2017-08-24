@@ -1,0 +1,35 @@
+container-name-run : "devops-express-run"
+container-name-tools : "devops-express-tools"
+
+host-path-run : "."
+host-path-tools : "."
+
+container-path-run : "/app"
+container-path-tools : "/app"
+
+container-mounts-run:
+   - "./node_modules_linux": "/app/node_modules"
+container-mounts-tools:
+   - "./node_modules_linux": "/app/node_modules"
+
+container-port-map : "8080:8080"
+container-port-map-debug : "5858:5858"
+
+dockerfile-run : "Dockerfile"
+dockerfile-tools : "Dockerfile-tools"
+
+image-name-run : "devops-express-run"
+image-name-tools : "devops-express-tools"
+
+build-cmd-run : "npm install --production --unsafe-perm"
+test-cmd : "npm run test"
+build-cmd-debug : "npm install --unsafe-perm"
+
+run-cmd : ""
+debug-cmd : "npm run debug"
+stop-cmd : "npm stop"
+
+version : "0.0.3"
+chart-path : "chart/devops"
+ibm-generated-id : "b661bc5f-5797-4947-8641-0d24800807ce"
+credentials-filepath : "server/localdev-config.json, vcap-local.js, credentials.json"
