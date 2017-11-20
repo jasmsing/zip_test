@@ -6,7 +6,7 @@ required:
  - repo
 
 toolchain:
-  name: devops
+  name: zip_test
 
 # Github repos
 repo:
